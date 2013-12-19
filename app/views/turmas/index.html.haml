@@ -1,0 +1,17 @@
+%h1 Listing turmas
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @turmas.each do |turma|
+    %tr
+      %td= link_to 'Show', turma
+      %td= link_to 'Edit', edit_turma_path(turma)
+      %td= link_to 'Destroy', turma, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Turma', new_turma_path
